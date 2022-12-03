@@ -17,4 +17,4 @@ def ces(file, alphabet, alphabet_inverse):
             max_kolvo = freq[letter]
     pos_letter_max = alphabet[letter_max]
     shift = (pos_letter_max - 4) % 26
-    deshifr.ces(shift, file)
+    deshifr.ces(shift, file, alphabet, alphabet_inverse)
