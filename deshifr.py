@@ -1,4 +1,7 @@
 def ces(shift, file, alphabet, alphabet_inverse):
+    if !isinstance(shift, int):
+      print('Введите ключ-число')
+      return
     with open(file) as f, open('output.txt', 'w') as out:
         message = f.read()
         for let in message:
@@ -10,6 +13,9 @@ def ces(shift, file, alphabet, alphabet_inverse):
                 out.write(let)
 
 def vig(key_word, file, alphabet, alphabet_inverse):
+    if !isinstance(key, str):
+      print('Введите ключ-строку')
+      return
     key_word = key_word.lower()
     length = len(key_word)
     with open(file) as f, open('output.txt', 'w') as out:
