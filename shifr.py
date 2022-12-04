@@ -1,6 +1,9 @@
 from random import randint
 
 def ces(shift, file, alphabet, alphabet_inverse):
+    if !isinstance(shift, int):
+      print('Введите ключ-число')
+      return
     with open(file) as f, open('output.txt', 'w') as out:
         message = f.read()
         for let in message:
@@ -12,6 +15,9 @@ def ces(shift, file, alphabet, alphabet_inverse):
                 out.write(let)
 
 def vig(key_word, file, alphabet, alphabet_inverse):
+    if !isinstance(shift, int):
+        print('Введите ключ-слово')
+      return
     key_word = key_word.lower()
     length = len(key_word)
     with open(file) as f, open('output.txt', 'w') as out:
@@ -45,5 +51,3 @@ def ver(file, alphabet, alphabet_inverse):
         key_word += alphabet_inverse[randint(0, 26)]
     vig(key_word, file)
     print('Ключ: ', key_word)
-
-
