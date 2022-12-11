@@ -1,5 +1,5 @@
 def ces(shift, file, alphabet, alphabet_inverse):
-    if !isinstance(shift, int):
+    if not isinstance(shift, int):
       print('Введите ключ-число')
       return
     with open(file) as f, open('output.txt', 'w') as out:
