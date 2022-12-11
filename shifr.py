@@ -1,7 +1,7 @@
 from random import randint
 
 def ces(shift, file, alphabet, alphabet_inverse):
-    if !isinstance(shift, int):
+    if not isinstance(shift, int):
       print('Введите ключ-число')
       return
     with open(file) as f, open('output.txt', 'w') as out:
@@ -15,7 +15,7 @@ def ces(shift, file, alphabet, alphabet_inverse):
                 out.write(let)
 
 def vig(key_word, file, alphabet, alphabet_inverse):
-    if !isinstance(shift, int):
+    if not isinstance(shift, int):
         print('Введите ключ-слово')
       return
     key_word = key_word.lower()
