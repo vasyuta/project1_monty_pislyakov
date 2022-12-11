@@ -13,7 +13,7 @@ def ces(shift, file, alphabet, alphabet_inverse):
                 out.write(let)
 
 def vig(key_word, file, alphabet, alphabet_inverse):
-    if !isinstance(key, str):
+    if not isinstance(key, str):
       print('Введите ключ-строку')
       return
     key_word = key_word.lower()
