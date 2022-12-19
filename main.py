@@ -4,7 +4,7 @@ import shifr
 import deshifr
 import hack
 import globals
-
+import steg
 
 def choos_ces_mode(file):
     print('Выберите режим: шифровка, дешифровка, взлом')
@@ -39,6 +39,17 @@ def choose_ver_mode(file):
         key = input()
         deshifr.vig(key, file, globals.alphabet, globals.alphabet_inverse)
 
+def choose_steg_mode(file):
+    print('Введите путь к фото')
+    photo = input()
+    print('Шифр или дешифровка')
+    do = input()
+    if do == 'дешифовка':
+        steg.deshifr(photo)
+    else:
+        steg.shifr(file, photo)
+        
+
 def mem_joke():
     print('Если хотите узнать о нас больше, то введите "i wanna believe"; если хотите узнать смешную историю, то введите "my fingers are fast"')
     finale = input()
@@ -68,5 +79,10 @@ def choose_mode():
     elif rezhim == 'шифр Виженера':
         choose_vig_mode(file)
     elif rezhim == 'шифр Вернама':
-        choose_ver_mode()
+        choose_ver_mode(file)
+    elif rezhim == 'Стеганография':
+        choose_steg_mode(file)
     mem_joke()
+    
+
+choose_mode()
